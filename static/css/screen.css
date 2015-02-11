@@ -1,0 +1,256 @@
+/* -------------------------------------------------------------------------*/
+/* Layout */
+/* line 21, ../sass/screen.scss */
+.window {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  margin: 0px auto;
+  overflow: hidden;
+  background-color: #eeeeee;
+  float: left;
+}
+
+/* line 32, ../sass/screen.scss */
+.cubecontainer {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  margin: 0;
+  -webkit-perspective: 200;
+  -moz-perspective: 200;
+  -ms-perspective: 200;
+  -o-perspective: 200;
+  perspective: 200;
+}
+
+/* line 40, ../sass/screen.scss */
+.cubecontainer > div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+/* line 46, ../sass/screen.scss */
+.cubecontainer > div figure {
+  width: 200px;
+  height: 200px;
+  display: block;
+  position: absolute;
+  border: 0px solid black;
+  margin: 0;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+  background-color: #aaaaaa;
+}
+
+/* line 56, ../sass/screen.scss */
+.cubecontainer > div .front {
+  background-image: url("/static/img/front.jpg");
+  -webkit-transform: rotateY(0deg) translateZ(100px);
+  -moz-transform: rotateY(0deg) translateZ(100px);
+  -ms-transform: rotateY(0deg) translateZ(100px);
+  -o-transform: rotateY(0deg) translateZ(100px);
+  transform: rotateY(0deg) translateZ(100px);
+}
+
+/* line 57, ../sass/screen.scss */
+.cubecontainer > div .back {
+  background-image: url("/static/img/back.jpg");
+  -webkit-transform: rotateX(180deg) translateZ(100px);
+  -moz-transform: rotateX(180deg) translateZ(100px);
+  -ms-transform: rotateX(180deg) translateZ(100px);
+  -o-transform: rotateX(180deg) translateZ(100px);
+  transform: rotateX(180deg) translateZ(100px);
+}
+
+/* line 58, ../sass/screen.scss */
+.cubecontainer > div .right {
+  background-image: url("/static/img/right.jpg");
+  -webkit-transform: rotateY(90deg) translateZ(100px);
+  -moz-transform: rotateY(90deg) translateZ(100px);
+  -ms-transform: rotateY(90deg) translateZ(100px);
+  -o-transform: rotateY(90deg) translateZ(100px);
+  transform: rotateY(90deg) translateZ(100px);
+}
+
+/* line 59, ../sass/screen.scss */
+.cubecontainer > div .left {
+  background-image: url("/static/img/left.jpg");
+  -webkit-transform: rotateY(-90deg) translateZ(100px);
+  -moz-transform: rotateY(-90deg) translateZ(100px);
+  -ms-transform: rotateY(-90deg) translateZ(100px);
+  -o-transform: rotateY(-90deg) translateZ(100px);
+  transform: rotateY(-90deg) translateZ(100px);
+}
+
+/* line 60, ../sass/screen.scss */
+.cubecontainer > div .top {
+  background-image: url("/static/img/top.jpg");
+  -webkit-transform: rotateX(90deg) translateZ(100px);
+  -moz-transform: rotateX(90deg) translateZ(100px);
+  -ms-transform: rotateX(90deg) translateZ(100px);
+  -o-transform: rotateX(90deg) translateZ(100px);
+  transform: rotateX(90deg) translateZ(100px);
+}
+
+/* line 61, ../sass/screen.scss */
+.cubecontainer > div .bottom {
+  background-image: url("/static/img/bottom.jpg");
+  -webkit-transform: rotateX(-90deg) translateZ(100px);
+  -moz-transform: rotateX(-90deg) translateZ(100px);
+  -ms-transform: rotateX(-90deg) translateZ(100px);
+  -o-transform: rotateX(-90deg) translateZ(100px);
+  transform: rotateX(-90deg) translateZ(100px);
+}
+
+/* line 62, ../sass/screen.scss */
+.cubecontainer > div {
+  -webkit-transform: translateZ(-100px);
+  -moz-transform: translateZ(-100px);
+  -ms-transform: translateZ(-100px);
+  -o-transform: translateZ(-100px);
+  transform: translateZ(-100px);
+}
+
+/* line 64, ../sass/screen.scss */
+.cubecontainer > div.backthefuckup {
+  -webkit-transform: translateZ(-150px);
+  -moz-transform: translateZ(-150px);
+  -ms-transform: translateZ(-150px);
+  -o-transform: translateZ(-150px);
+  transform: translateZ(-150px);
+}
+
+/*.cubecontainer > div.show-front { -webkit-transform: translateZ(-100px) rotateY(0deg); }
+.cubecontainer > div.show-back {-webkit-transform: translateZ(-150px) rotateX(-180deg); }
+.cubecontainer > div.show-back-face {-webkit-transform: translateZ(-100px) rotateX(-180deg); }
+.cubecontainer > div.show-right { -webkit-transform: translateZ(-100px) rotateY(-90deg); }
+.cubecontainer > div.show-left { -webkit-transform: translateZ(-100px) rotateY(90deg); }
+.cubecontainer > div.show-top { -webkit-transform: translateZ(-100px) rotateX(-90deg); }
+.cubecontainer > div.show-bottom { -webkit-transform: translateZ(-100px) rotateX(90deg); }*/
+/* line 74, ../sass/screen.scss */
+.cubecontainer > div.show-front {
+  -webkit-transform: translateZ(-150px) rotateY(0deg);
+}
+
+/* line 75, ../sass/screen.scss */
+.cubecontainer > div.show-front-face {
+  -webkit-transform: translateZ(-100px);
+}
+
+/* line 77, ../sass/screen.scss */
+.cubecontainer > div.show-back {
+  -webkit-transform: translateZ(-150px) rotateX(-180deg);
+}
+
+/* line 78, ../sass/screen.scss */
+.cubecontainer > div.show-back-face {
+  -webkit-transform: translateZ(-100px) rotateX(-180deg);
+}
+
+/* line 80, ../sass/screen.scss */
+.cubecontainer > div.show-right {
+  -webkit-transform: translateZ(-150px) rotateY(-90deg);
+}
+
+/* line 81, ../sass/screen.scss */
+.cubecontainer > div.show-right-face {
+  -webkit-transform: translateZ(-100px) rotateY(-90deg);
+}
+
+/* line 83, ../sass/screen.scss */
+.cubecontainer > div.show-left {
+  -webkit-transform: translateZ(-150px) rotateY(90deg);
+}
+
+/* line 84, ../sass/screen.scss */
+.cubecontainer > div.show-left-face {
+  -webkit-transform: translateZ(-100px) rotateY(90deg);
+}
+
+/* line 86, ../sass/screen.scss */
+.cubecontainer > div.show-top {
+  -webkit-transform: translateZ(-150px) rotateX(-90deg);
+}
+
+/* line 87, ../sass/screen.scss */
+.cubecontainer > div.show-top-face {
+  -webkit-transform: translateZ(-100px) rotateX(-90deg);
+}
+
+/* line 89, ../sass/screen.scss */
+.cubecontainer > div.show-bottom {
+  -webkit-transform: translateZ(-150px) rotateX(90deg);
+}
+
+/* line 90, ../sass/screen.scss */
+.cubecontainer > div.show-bottom-face {
+  -webkit-transform: translateZ(-100px) rotateX(90deg);
+}
+
+/* line 92, ../sass/screen.scss */
+.cubecontainer > div {
+  -webkit-transition: -webkit-transform 0.3s;
+  -webkit-transition-timing-function: linear;
+}
+
+/* line 98, ../sass/screen.scss */
+.container {
+  *zoom: 1;
+  max-width: 62.5em;
+  _width: 62.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 38, ../../../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 101, ../sass/screen.scss */
+.container nav {
+  width: 49.6%;
+  float: left;
+  margin-right: 0.8%;
+  display: inline;
+}
+/* line 102, ../sass/screen.scss */
+.container .panel {
+  width: 32.8%;
+  float: left;
+  margin-right: 0.8%;
+  display: inline;
+  margin-top: 0.5em;
+}
+/* line 105, ../sass/screen.scss */
+.container .panel:nth-child(3n) {
+  float: right;
+  margin-right: 0;
+  *margin-left: -0.5em;
+  display: inline;
+}
+/* line 108, ../sass/screen.scss */
+.container .panel .panel-inner {
+  padding: 20px;
+  -webkit-box-shadow: white 10px 0px 0px inset, #aaaaaa -10px 0px 0px inset, white 0px 10px 0px inset, #aaaaaa 0px -10px 0px inset;
+  -moz-box-shadow: white 10px 0px 0px inset, #aaaaaa -10px 0px 0px inset, white 0px 10px 0px inset, #aaaaaa 0px -10px 0px inset;
+  box-shadow: white 10px 0px 0px inset, #aaaaaa -10px 0px 0px inset, white 0px 10px 0px inset, #aaaaaa 0px -10px 0px inset;
+}
+/* line 121, ../sass/screen.scss */
+.container article {
+  width: 74.9004%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -0.5em;
+  display: inline;
+  border: 1px solid black;
+}

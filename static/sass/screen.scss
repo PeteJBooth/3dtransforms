@@ -1,0 +1,127 @@
+// ---------------------------------------------------------------------------
+// Imports
+
+@import "base";
+@import "compass/css3/border-radius";
+@import "compass/css3/box-shadow";
+@import "compass/css3/opacity";
+@import "compass/css3/transform";
+@import "compass/css3/transition";
+
+$default-border-radius:15px;
+$border-1: #aaaaaa;
+$border-2: #ffffff;
+
+$default-origin-x: 50%;
+$default-origin-y: 50%;
+$default-origin-z: 50%;
+
+/* -------------------------------------------------------------------------*/
+/* Layout */
+.window {
+	width: 200px;
+	height: 200px;
+	position: relative;
+	margin: 0px auto;
+	overflow: hidden;
+	//border: 1px solid #CCC;
+	background-color: #eeeeee;
+	float: left;
+}
+
+.cubecontainer {
+	width: 200px;
+	height: 200px;
+	position: relative;
+	margin: 0;
+	
+	@include perspective(200);
+}
+.cubecontainer > div {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	@include transform-style(preserve-3d);
+}
+.cubecontainer > div figure {
+	width: 200px;
+	height: 200px;
+	display: block;
+	position: absolute;
+	border: 0px solid black;
+	margin:0;
+	@include opacity(1);
+	background-color: #aaaaaa;
+}
+.cubecontainer > div .front {background-image: url('/static/img/front.jpg'); @include transform3d(rotateY(0deg) translateZ(100px))};
+.cubecontainer > div .back {background-image: url('/static/img/back.jpg'); @include transform3d(rotateX(180deg) translateZ(100px)) };
+.cubecontainer > div .right {background-image: url('/static/img/right.jpg'); @include transform3d(rotateY(90deg)  translateZ(100px)) };
+.cubecontainer > div .left {background-image: url('/static/img/left.jpg'); @include transform3d(rotateY(-90deg) translateZ(100px)) };
+.cubecontainer > div .top {background-image: url('/static/img/top.jpg'); @include transform3d(rotateX(90deg) translateZ(100px)) };
+.cubecontainer > div .bottom {background-image: url('/static/img/bottom.jpg'); @include transform3d(rotateX(-90deg) translateZ(100px)) };
+.cubecontainer > div {@include transform3d(translateZ(-100px)) };
+
+.cubecontainer > div.backthefuckup {@include transform3d(translateZ(-150px))};
+
+/*.cubecontainer > div.show-front { -webkit-transform: translateZ(-100px) rotateY(0deg); }
+.cubecontainer > div.show-back {-webkit-transform: translateZ(-150px) rotateX(-180deg); }
+.cubecontainer > div.show-back-face {-webkit-transform: translateZ(-100px) rotateX(-180deg); }
+.cubecontainer > div.show-right { -webkit-transform: translateZ(-100px) rotateY(-90deg); }
+.cubecontainer > div.show-left { -webkit-transform: translateZ(-100px) rotateY(90deg); }
+.cubecontainer > div.show-top { -webkit-transform: translateZ(-100px) rotateX(-90deg); }
+.cubecontainer > div.show-bottom { -webkit-transform: translateZ(-100px) rotateX(90deg); }*/
+
+.cubecontainer > div.show-front { -webkit-transform: translateZ(-150px) rotateY(0deg); }
+.cubecontainer > div.show-front-face { -webkit-transform: translateZ(-100px)}
+
+.cubecontainer > div.show-back {-webkit-transform: translateZ(-150px) rotateX(-180deg); }
+.cubecontainer > div.show-back-face {-webkit-transform: translateZ(-100px) rotateX(-180deg); }
+
+.cubecontainer > div.show-right { -webkit-transform: translateZ(-150px) rotateY(-90deg); }
+.cubecontainer > div.show-right-face { -webkit-transform: translateZ(-100px) rotateY(-90deg); }
+
+.cubecontainer > div.show-left { -webkit-transform: translateZ(-150px) rotateY(90deg); }
+.cubecontainer > div.show-left-face { -webkit-transform: translateZ(-100px) rotateY(90deg); }
+
+.cubecontainer > div.show-top { -webkit-transform: translateZ(-150px) rotateX(-90deg); }
+.cubecontainer > div.show-top-face { -webkit-transform: translateZ(-100px) rotateX(-90deg); }
+
+.cubecontainer > div.show-bottom { -webkit-transform: translateZ(-150px) rotateX(90deg); }
+.cubecontainer > div.show-bottom-face { -webkit-transform: translateZ(-100px) rotateX(90deg); }
+
+.cubecontainer > div { 
+	-webkit-transition: -webkit-transform 0.3s;
+	-webkit-transition-timing-function: linear;
+	//-webkit-transition-delay: 0 1s;	
+}
+
+.container {
+	@include container;
+	//@include susy-grid-background;
+	nav { @include span-columns(3); }
+	.panel {
+		@include span-columns(2,6);
+		
+		&:nth-child(3n) { @include omega;}	
+		//background-color: #aaaaaa;
+		margin-top: $gutter-width;
+		.panel-inner {
+			padding:20px;
+			//@include border-radius();
+			@include box-shadow(
+				$border-2 10px 0px 0px inset,
+				$border-1 -10px 0px 0px inset,
+				$border-2 0px 10px 0px inset,
+				$border-1 0px -10px 0px inset);
+		}
+	}
+	.panel:active{
+		//@include transform3d(translateZ(1px));
+	}
+	article {  
+		@include span-columns(9 omega,12); 
+		border:1px solid black;
+	}
+}
+
+

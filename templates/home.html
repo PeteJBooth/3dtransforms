@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% load cms_tags %}
+
+{% block title %}Big jobs{% endblock %}
+
+{% block content %}
+	<div id="front" class="control">front</div>
+<div id="back" class="control">back</div>
+<div id="left" class="control">left</div>
+<div id="right" class="control">right</div>
+<div id="top" class="control">top</div>
+<div id="bottom" class="control">bottom</div>
+
+<div class="window">
+	<section class="cubecontainer">
+    <div class="cube" data-orientation="front">
+      <figure class="front"></figure>
+      <figure class="back"></figure>
+      <figure class="right"></figure>
+      <figure class="left"></figure>
+      <figure class="top"></figure>
+      <figure class="bottom"></figure>
+    </div>
+  </section>
+</div>
+
+{%endblock%}
